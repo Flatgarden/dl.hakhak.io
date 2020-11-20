@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>학학이 다운받기</title>
+    <meta property="og:title" content="학학이 다운받기">
+    <meta name="description" content="어려운 입시생활, 학학이가 든든한 친구로 도와줄게요!">
+    <meta property="og:description" content="어려운 입시생활, 학학이가 든든한 친구로 도와줄게요!">
+</head>
+<script>
+    const device = navigator.userAgent.toLowerCase();
+
+    if (device.indexOf('android') > -1) {
+        window.location.href = 'https://play.google.com/store/apps/details?id=kr.flatgarden.hakhak&hl=ko';
+    } else if (device.indexOf("iphone") > -1 || device.indexOf("ipad") > -1 || device.indexOf("ipod") > -1) {
+        window.location.href = 'https://apps.apple.com/kr/app/%ED%95%99%ED%95%99%EC%9D%B4/id1509380462';
+    } else {
+        window.location.href = 'https://flatgarden.imweb.me/';
+    }
+
+</script>
+
+</html>
