@@ -17,7 +17,7 @@
         <meta property="og:image" content="https://user-images.githubusercontent.com/59823089/99762042-eb41fd00-2b3a-11eb-9a90-a8d2cb35f162.jpg">
     </head>
     <body style="background: #000">
-        <img class="image" src="image.svg" width="50%" style="margin: 0 25%" />
+        <img class="image" src="image.png" width="50%" style="margin: 0 25%" />
         <h1 id="counter" style="text-align: center; color: white">Loading...</h1>
         <script>
             const device = navigator.userAgent.toLowerCase();
@@ -36,7 +36,7 @@
             setInterval(() => {
                 console.log(counter)
                 if (--counter === 0) redo()
-                document.getElementById("counter").innerText = `Redirect after ${counter} seconds${".".repeat(counter)}`
+                document.getElementById("counter").innerText = `Redirect after ${counter} seconds${'.'.repeat(counter)}`
             }, 1000);
         </script>
     </body>
