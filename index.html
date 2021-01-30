@@ -17,8 +17,10 @@
         <meta property="og:image" content="https://user-images.githubusercontent.com/59823089/99762042-eb41fd00-2b3a-11eb-9a90-a8d2cb35f162.jpg">
     </head>
     <body style="background: #000">
+        <!--
         <img class="image" src="image.png" width="50%" style="margin: 0 25%" />
         <h1 id="counter" style="text-align: center; color: white">Loading...</h1>
+        -->
         <script>
             const device = navigator.userAgent.toLowerCase();
             
@@ -26,8 +28,10 @@
                 if (device.indexOf('android') > -1) {
                     window.location.href = 'market://details?id=kr.flatgarden.hakhak';
                     window.location.href = 'https://play.google.com/store/apps/details?id=kr.flatgarden.hakhak';
+                    window.close()
                 } else if (device.indexOf('iphone') > -1 || device.indexOf('ipad') > -1 || device.indexOf('ipod') > -1) {
                     window.location.href = 'https://apps.apple.com/kr/app/%ED%95%99%ED%95%99%EC%9D%B4/id1509380462';
+                    window.close()
                 } else {
                     window.location.href = 'https://hakhak.io/';
                 }
@@ -36,7 +40,6 @@
 
             let counter = 4
             setInterval(() => {
-                console.log(counter)
                 if (--counter === 0) redo()
                 document.getElementById("counter").innerText = `Redirect after ${counter} seconds${'.'.repeat(counter)}`
             }, 1000);
