@@ -26,12 +26,14 @@
             
             const redo = () => {
                 if (device.indexOf('android') > -1) {
+                    window.open('intent://www.hakhak.io/#Intent;scheme=hakhak;package=kr.flatgarden.hakhak;end')
                     window.location.href = 'market://details?id=kr.flatgarden.hakhak';
                     window.location.href = 'https://play.google.com/store/apps/details?id=kr.flatgarden.hakhak';
                     setTimeout(() => {
                         window.close()
                     }, 1000);
                 } else if (device.indexOf('iphone') > -1 || device.indexOf('ipad') > -1 || device.indexOf('ipod') > -1) {
+                    window.open('hakhak://home')
                     window.location.href = 'https://apps.apple.com/kr/app/%ED%95%99%ED%95%99%EC%9D%B4/id1509380462';
                     setTimeout(() => {
                         window.close()
