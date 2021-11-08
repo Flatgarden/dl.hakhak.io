@@ -24,31 +24,20 @@
         <script>
             const device = navigator.userAgent.toLowerCase();
             
-            const redo = () => {
-                if (device.indexOf('android') > -1) {
-                    window.open('intent://www.hakhak.io/#Intent;scheme=hakhak;package=kr.flatgarden.hakhak;end')
+            if (device.indexOf('android') > -1) {
+                location.href = 'intent://www.hakhak.io/#Intent;scheme=hakhak;package=kr.flatgarden.hakhak;end'
+                setTimeout(function() {
                     window.location.href = 'market://details?id=kr.flatgarden.hakhak';
                     window.location.href = 'https://play.google.com/store/apps/details?id=kr.flatgarden.hakhak';
-                    setTimeout(() => {
-                        window.close()
-                    }, 1000);
-                } else if (device.indexOf('iphone') > -1 || device.indexOf('ipad') > -1 || device.indexOf('ipod') > -1) {
-                    window.open('hakhak://home')
-                    window.location.href = 'https://apps.apple.com/kr/app/%ED%95%99%ED%95%99%EC%9D%B4/id1509380462';
-                    setTimeout(() => {
-                        window.close()
-                    }, 1000);
-                } else {
-                    window.location.href = 'https://hakhak.io/';
-                }
+                }, 1000);
+            } else if (device.indexOf('iphone') > -1 || device.indexOf('ipad') > -1 || device.indexOf('ipod') > -1) {
+                location.href = 'hakhak://home';
+                setTimeout(function() {
+                    location.href = 'https://apps.apple.com/kr/app/%ED%95%99%ED%95%99%EC%9D%B4/id1509380462';
+                }, 1000);
+            } else {
+                window.location.href = 'https://hakhak.io/';
             }
-            redo()
-
-            /* let counter = 4
-            setInterval(() => {
-                if (--counter === 0) redo()
-                document.getElementById("counter").innerText = `Redirect after ${counter} seconds${'.'.repeat(counter)}`
-            }, 1000); */
         </script>
     </body>
 </html>
