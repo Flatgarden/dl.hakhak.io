@@ -24,11 +24,15 @@
         <script>
             const device = navigator.userAgent.toLowerCase();
             
+            window.addEventListener('blur', function(event){
+                window.close();
+            })
+            
             if (device.indexOf('android') > -1) {
                 location.href = 'intent://www.hakhak.io/#Intent;scheme=hakhak;package=kr.flatgarden.hakhak;end'
                 setTimeout(function() {
-                    window.location.href = 'market://details?id=kr.flatgarden.hakhak';
-                    window.location.href = 'https://play.google.com/store/apps/details?id=kr.flatgarden.hakhak';
+                    location.href = 'market://details?id=kr.flatgarden.hakhak';
+                    location.href = 'https://play.google.com/store/apps/details?id=kr.flatgarden.hakhak';
                 }, 1000);
             } else if (device.indexOf('iphone') > -1 || device.indexOf('ipad') > -1 || device.indexOf('ipod') > -1) {
                 location.href = 'hakhak://home';
